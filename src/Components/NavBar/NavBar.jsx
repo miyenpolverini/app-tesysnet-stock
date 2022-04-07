@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import './NavBar.scss';
 import { BiCalendar } from "react-icons/bi";
 import { GiPresent } from "react-icons/gi";
-import Navbar from 'react-bootstrap/Navbar';
 
 const NavBar = () => {
 

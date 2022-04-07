@@ -1,0 +1,126 @@
+.nav-index{
+  background-color: rgba(255, 255, 255, .9);
+  border-bottom: 1px solid rgba(0, 0, 0, .3);
+  position: fixed !important;
+  width: 100%;
+  z-index: 1;
+}
+
+.logoWedding{
+    margin-left: 2em;  
+    color: black;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu-boot{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    text-decoration: none;
+    margin-right: 1em;
+    display:flex;
+    align-items: center;
+    padding: 0.5em;
+  
+}
+
+.menu-boot:hover{
+    color: black;
+    background-color: rgba(238, 222, 135, 0.6);
+    border-radius: 10px;
+}
+
+.cajitaContainer{
+    display: flex;
+    align-items:center;
+    margin: 0.5em;
+    text-decoration: none;
+}
+
+.cajita{
+    width: 4em;
+}
+
+.icon-calendar{
+  font-size: 30px;
+}
+
+.info{
+  font-size: 14px;
+  margin-left: 5px;
+  margin-top: 2em;
+}
+
+.cantCarrito{
+  font-size: 1em;
+  width: 2em;
+  color: black;
+  font-weight: bolder;
+  border-radius: 10px;
+  background-color: rgba(218, 165, 32, .7);
+  padding: 0.5em;
+  margin-top: 1em;
+
+}
+
+// MENU DESPLEGABLE 
+
+ul ul li {
+  width: 190px;
+  margin-bottom: 5px;
+  list-style: none;
+}
+
+
+/* para desplegar sub-menu sin clickear */
+ul li:hover ul {
+  display:block;
+  margin-top: 2px;
+  background-color: darkslategray;
+} 
+
+.submenu-boot{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    color: black;
+  }
+
+
+.submenu-boot li a:hover{
+  color: gray;  
+}
+
+
+
+.misCompras{
+    text-decoration: none;
+    color: white;  
+}
+
+.misCompras:hover{
+  color: gray;  
+}
+
+
+
+@media only screen and (min-width: 990px)  {
+
+  .logoWedding{
+    margin-right: 8em;
+}
+
+}
+
+@media only screen and (max-width: 989px)  {
+
+  .cajitaContainer{
+    display: inline-flex;
+
+
+}
+
+
+
+
+}

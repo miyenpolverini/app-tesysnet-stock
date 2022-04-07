@@ -191,7 +191,7 @@
     padding: 1em;   
     font-family: 'Poppins', sans-serif;
     font-size: 0.8em;
-    width: 100%;
+    width: 50%;
     height: 3.5em;  
     position: relative;
     bottom: 0px;
@@ -206,7 +206,7 @@
     padding: 1em; 
     font-family: 'Poppins', sans-serif;
     font-size: 0.8em;
-    width: 100%;
+    width: 50%;
     height: 3.5em;  
     position: relative;
     bottom: 0px;
@@ -290,5 +290,11 @@
         display: inline-block;
         margin-top: 4em;
      }
+
+    .notif-add,
+    .notif-delete{
+        width: 100%;
+    }
+
 
   }

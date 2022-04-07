@@ -1,0 +1,45 @@
+.App-FormBuy{
+    margin-top: 1em;
+}
+
+
+
+.form-compra{
+    color: black;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.titleForm{
+    color: black;
+    font-weight: bolder;
+    
+}
+
+.btnFinish,
+.btnCancel{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    width: 250px;
+    padding: 0.5em;
+    border-radius: 10px;
+    background-color:rgba(0, 128, 0, .5);
+    border: rgba(30, 144, 255, .9);
+    margin: 0.5em;    
+}
+
+
+
+.btnFinish:hover,
+.btnCancel:hover{
+    background-color:rgba(2, 54, 2, 0.5);
+}
+
+@media only screen and (max-width: 675px) {
+
+    .App-FormBuy{
+        margin-top: 5em;
+    }
+
+}

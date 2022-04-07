@@ -1,0 +1,30 @@
+.container-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items:center;
+    margin: 5em;
+}
+
+.detail-tit{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.detail-info-tit{
+    color: gray;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+}
+
+.detail-info{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+}
+
+.contMaps{
+    width: 18em;
+}
+

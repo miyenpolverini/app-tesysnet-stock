@@ -17,21 +17,48 @@ const ItemListContainer = (props) => {
     useEffect(() => {
 
         if (categoryId) {
-            //consulta firebase por filtros (query)
 
-            getDocs(query(collection(dataBase, 'regalos'), where('category', '==', categoryId), orderBy('price'))).then((QuerySnapshot) => {
+            if (categoryId === 'todos') {
 
-                const products = QuerySnapshot.docs.map(doc => {
+                //consulta firebase por todos (primera opcion de select)
 
-                    return { id: doc.id, ...doc.data() }
+                (async () => {
+
+                    try {
+
+                        const QuerySnapshot = await getDocs(query(collection(dataBase, 'regalos'), orderBy('category')))
+                        const products = QuerySnapshot.docs.map(doc => {
+
+                            return { id: doc.id, ...doc.data() }
+
+                        })
+                        setProducts(products)
+                        setLoading(false)
+                    } catch (error) {
+                        console.log('error', error)
+                    }
+                })()
+
+            }
+            else {
+                //consulta firebase por filtros (query)
+
+                getDocs(query(collection(dataBase, 'regalos'), where('category', '==', categoryId), orderBy('price'))).then((QuerySnapshot) => {
+
+                    const products = QuerySnapshot.docs.map(doc => {
+
+                        return { id: doc.id, ...doc.data() }
+                    })
+
+                    setProducts(products)
+                }).catch((error) => {
+                    console.log('Error conexion firebase', error)
+                }).finally(() => {
+                    setLoading(false)
                 })
 
-                setProducts(products)
-            }).catch((error) => {
-                console.log('Error conexion firebase', error)
-            }).finally(() => {
-                setLoading(false)
-            })
+
+            }
 
         }
         else {

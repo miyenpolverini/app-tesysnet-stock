@@ -11,6 +11,9 @@ export const AddCartContextProvider = ({ children }) => {
     const [notifAdd, setNotifAdd] = useState(false)
     const [notifDel, setNotifDel] = useState(false)
 
+    const [category, setCategory] = useState('')
+    const [price, setPrice] = useState('')
+
     /* FUNCIONES */
     const isInCart = (prodId) => {
 
@@ -139,7 +142,8 @@ export const AddCartContextProvider = ({ children }) => {
     return (
         <Context.Provider value={{
             addCarrito, removeProducto, calculateCantTotal, calculatePrecioTotal,
-            emptyCart, parseNumber, carrito, loadOrder, order, saveEmail, email, SetNotification, setNotifAdd, notifAdd, notifDel
+            emptyCart, parseNumber, carrito, loadOrder, order, saveEmail, email, SetNotification, setNotifAdd, notifAdd, notifDel,
+            category, setCategory, price, setPrice
         }}>
             {children}
         </Context.Provider>

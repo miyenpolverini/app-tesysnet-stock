@@ -267,14 +267,19 @@
 
 //COMBO
 
-.combo-category{
-    width: 10em;
-    margin:0 auto;
+.combo-category{ 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .combo-category select{
+    width: 20em;
     font-size: 0.6em;
     font-family: 'Poppins', sans-serif;
+    margin: 1em;
 }
 
 
@@ -309,6 +314,13 @@
     .notif-delete{
         width: 100%;
     }
+
+    .combo-category select{
+        width: 28em;
+        height: 4em;
+        font-size: 0.7em;
+    }
+    
 
 
   }

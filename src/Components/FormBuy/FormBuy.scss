@@ -1,5 +1,5 @@
 .App-FormBuy{
-    margin-top: 1em;
+    margin: 1.5em 13em 0 13em;
 }
 
 
@@ -36,10 +36,10 @@
     background-color:rgba(2, 54, 2, 0.5);
 }
 
-@media only screen and (max-width: 675px) {
+@media only screen and (max-width: 1095px) {
 
     .App-FormBuy{
-        margin-top: 5em;
+        margin: 5em 0.5em 0 0.5em;
     }
 
 }

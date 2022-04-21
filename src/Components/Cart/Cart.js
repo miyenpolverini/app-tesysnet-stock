@@ -36,6 +36,7 @@ const Cart = () => {
 
     const CartFull = () => {
         return (
+            <>
             <div className='App-CartFull'>
                 {isDesktopOrLaptop ?
                     <table className="table table-light table-hover table-carrito">
@@ -84,9 +85,11 @@ const Cart = () => {
                 }
                 <button className='botonTerminar' onClick={() => setUpOrder()}>Pagar regalo</button>
                 <button className='botonVaciar' onClick={() => emptyCart()}>Vaciar lista</button>
-                {notifDel && <SetNotification />}
+                
 
             </div>
+            {notifDel && <SetNotification />}
+            </>
         )
     }
 

@@ -191,10 +191,10 @@
     padding: 1em;   
     font-family: 'Poppins', sans-serif;
     font-size: 0.8em;
-    width: 50%;
+    width: 100%;
     height: 3.5em;  
     position: relative;
-    bottom: 0px;
+    bottom: 5px;
     position:fixed;
 }
 
@@ -206,10 +206,10 @@
     padding: 1em; 
     font-family: 'Poppins', sans-serif;
     font-size: 0.8em;
-    width: 50%;
+    width: 100%;
     height: 3.5em;  
     position: relative;
-    bottom: 0px;
+    bottom: 5px;
     position:fixed;
 }
 
@@ -310,10 +310,6 @@
         margin-top: 4em;
      }
 
-    .notif-add,
-    .notif-delete{
-        width: 100%;
-    }
 
     .combo-category select{
         width: 28em;

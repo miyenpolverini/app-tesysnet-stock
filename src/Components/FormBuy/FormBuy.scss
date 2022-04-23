@@ -16,8 +16,7 @@
     
 }
 
-.btnFinish,
-.btnCancel{
+.btnFinish{
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     color: white;
@@ -29,6 +28,17 @@
     margin: 0.5em;    
 }
 
+.btnCancel{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    width: 250px;
+    padding: 0.5em;
+    border-radius: 10px;
+    background-color:#404850;
+    border: rgba(30, 144, 255, .9);
+    margin: 0.5em;    
+}
 
 
 .btnFinish:hover,

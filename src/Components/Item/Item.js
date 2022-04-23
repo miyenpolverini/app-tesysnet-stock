@@ -3,6 +3,8 @@ import './Item.scss'
 import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import cartContext from '../../Context/cartContext'
+/* import Popup from '../Popup/Popup' */
+
 
 const Item = ({ producto }) => {
 
@@ -23,6 +25,7 @@ const Item = ({ producto }) => {
                         </div>
                         <button className='tarjeta-boton'>REGALÁ</button>
                     </Link>
+                    {/* <Popup prodId={producto.id} /> */}
                 </div>
             </div>
         </div>

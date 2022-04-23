@@ -37,58 +37,59 @@ const Cart = () => {
     const CartFull = () => {
         return (
             <>
-            <div className='App-CartFull'>
-                {isDesktopOrLaptop ?
-                    <table className="table table-light table-hover table-carrito">
-                        <thead>
-                            <tr>
-                                <th className='table-dark table-tit-prod' scope="col">Regalo</th>
-                                <th className='table-dark table-tit-cant' scope="col">Cantidad</th>
-                                <th className='table-dark table-tit-prec' scope="col">Precio</th>
-                                <th className='table-dark table-tit-stot' scope="col">Subtotal</th>
-                                <th className='table-dark table-tit-tach' scope="col"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {carrito.map(product => {
-                                return (
-                                    <tr key={product.id}>
-                                        <td className='prod-name'>{product.detail}</td>
-                                        <td>{product.cantidad}</td>
-                                        <td className='prod-name'>$ {parseNumber(product.price)}</td>
-                                        <td className='prod-name'>$ {parseNumber(`${product.cantidad * product.price}`)}</td>
-                                        <td><img className='tachito' src='https://res.cloudinary.com/dw94zgfgu/image/upload/v1641066871/tachito_yzwc0i.svg' alt='carrito-lleno'
-                                            onClick={() => removeProducto(product.id)}></img></td>
-                                    </tr>
-                                )
-                            })}
-                            <tr>
-                                <td colSpan="2"></td>
-                                <td className='totalPrecio'>TOTAL</td>
-                                <td className='totalPrecio'>$ {calculatePrecioTotal()}</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div className='App-CartFull'>
+                    {isDesktopOrLaptop ?
+                        <table className="table table-light table-hover table-carrito">
+                            <thead>
+                                <tr>
+                                    <th className='table-dark table-tit-prod' scope="col">Regalo</th>
+                                    <th className='table-dark table-tit-cant' scope="col">Cantidad</th>
+                                    <th className='table-dark table-tit-prec' scope="col">Precio</th>
+                                    <th className='table-dark table-tit-stot' scope="col">Subtotal</th>
+                                    <th className='table-dark table-tit-tach' scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {carrito.map(product => {
+                                    return (
+                                        <tr key={product.id}>
+                                            <td className='prod-name'>{product.detail}</td>
+                                            <td>{product.cantidad}</td>
+                                            <td className='prod-name'>$ {parseNumber(product.price)}</td>
+                                            <td className='prod-name'>$ {parseNumber(`${product.cantidad * product.price}`)}</td>
+                                            <td><img className='tachito' src='https://res.cloudinary.com/dw94zgfgu/image/upload/v1641066871/tachito_yzwc0i.svg' alt='carrito-lleno'
+                                                onClick={() => removeProducto(product.id)}></img></td>
+                                        </tr>
+                                    )
+                                })}
+                                <tr>
+                                    <td colSpan="2"></td>
+                                    <td className='totalPrecio'>TOTAL</td>
+                                    <td className='totalPrecio'>$ {calculatePrecioTotal()}</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                    :
+                        :
 
-                    <div>
-                        {carrito.map(product =>
-                            <CartMobile key={product.id} regalo={product} />
-                        )}
-                        <div className='total-regalo'>TOTAL: $ {calculatePrecioTotal()} </div>
-                    </div>
+                        <div>
+                            {carrito.map(product =>
+                                <CartMobile key={product.id} regalo={product} />
+                            )}
+                            <div className='total-regalo'>TOTAL: $ {calculatePrecioTotal()} </div>
+                        </div>
 
+                    }
 
-
-                }
-                <button className='botonTerminar' onClick={() => setUpOrder()}>Pagar regalo</button>
-                <button className='botonVaciar' onClick={() => emptyCart()}>Vaciar lista</button>
-                
-
-            </div>
-            {notifDel && <SetNotification />}
+                    <button className='botonVaciar' onClick={() => emptyCart()}>Vaciar lista</button>
+                    <Link to={'/regalos'}>
+                        <button className='btnAgregar'>Agregar otro regalo</button>
+                    </Link>
+                    <button className='botonTerminar' onClick={() => setUpOrder()}>Confirmar</button>
+                    
+                </div>
+                {notifDel && <SetNotification />}
             </>
         )
     }

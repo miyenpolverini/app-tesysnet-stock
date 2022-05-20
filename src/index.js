@@ -6,6 +6,9 @@ import reportWebVitals from './reportWebVitals';
 /* bootstrap */
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+/* uikit */
+
+import "uikit/dist/js/uikit.min.js"; 
 
 
 createRoot(

@@ -33,13 +33,14 @@
 .tarjeta {
     width: 10em;
     padding: 1em;   
+    
 }
 
 .tarjeta-desc{
     text-align: center;
     color: black;
     font-family: 'Poppins', sans-serif;
-    font-size: 0.5em;
+    font-size: 1rem;
     font-weight: bolder;
     position: relative;
     top: 10em;
@@ -62,6 +63,7 @@
     margin: 1em;
     background-color:rgba(0, 128, 0, .5);
     border: rgba(30, 144, 255, .9);
+    transition: all 500ms ease-out;
 }
 
 .tarjeta-contenido{
@@ -135,7 +137,7 @@
 
 .detalleProd{
     color: #666;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 300;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 20px;
@@ -314,11 +316,6 @@
         margin-left: -2em;
     }
 
-    .tarjeta-desc{
-        
-        font-size: 1em;
-    
-    }
    
     .itemDetalle {  
         display: inline-block;

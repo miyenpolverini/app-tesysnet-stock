@@ -21,6 +21,40 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.detail-compra-cbu{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 3em;
+}
+.detail-compra-alias{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 3.5em;
+}
+
+.container-clip{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.btn-copy{
+    margin-left: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    color: black;
+    padding: 0.5em;
+    border-radius: 10px;
+    background-color:rgba(0, 128, 0, .5);
+    border: rgba(30, 144, 255, .9);
+    transition: all 300ms ease-out;
+}
+
+
+.btn-copy:hover{
+    transform: scale(1.10, 1.10);
+}
+
 
 @media only screen and (max-width: 375px) {
 

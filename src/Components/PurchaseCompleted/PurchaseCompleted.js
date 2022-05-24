@@ -1,7 +1,11 @@
 import React from 'react'
 import './PurchaseCompleted.scss'
+import { useClipboard } from 'react-haiku';
 
 const PurchaseCompleted = () => {
+
+    const clipboard = useClipboard({ timeout: 1000 })
+    const clipboard2 = useClipboard({ timeout: 1000 })
 
     return (
         <div className='container-compra'>
@@ -17,9 +21,19 @@ const PurchaseCompleted = () => {
             <h5 className='detail-compra mt-3'>CUIL/CUIT</h5>
             <h6 className='detail-compra-info'>20339060658</h6>
             <h5 className='detail-compra mt-3'>CBU</h5>
-            <h6 className='detail-compra-info'>0170999940000027467835</h6>
+            <div className='container-clip' >
+                <h6 className='detail-compra-cbu'>0170999940000027467835</h6>
+                <button className='btn-copy' onClick={() => clipboard.copy('0170999940000027467835')}>
+                    {clipboard.copied ? 'Copied' : 'Copy'}
+                </button>
+            </div>
             <h5 className='detail-compra mt-3'>Alias</h5>
-            <h6 className='detail-compra-info'>miyokun10</h6>
+            <div className='container-clip'>
+                <h6 className='detail-compra-alias'>miyoflu</h6>
+                <button className='btn-copy' onClick={() => clipboard2.copy('miyoflu')}>
+                    {clipboard2.copied ? 'Copied' : 'Copy'}
+                </button>
+            </div>
         </div>
     )
 }

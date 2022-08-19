@@ -28,7 +28,7 @@ const ItemIndex = () => {
                 </div>
             </div>
  
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSduObXdLOEsNOO4aIB_j8a7NDvGRayxiRDYGDh-LtT6fED44A/viewform?embedded=true" width="640" height="1212" title='formu-asistencia' frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSduObXdLOEsNOO4aIB_j8a7NDvGRayxiRDYGDh-LtT6fED44A/viewform?embedded=true" width="350" height="1212" title='formu-asistencia' frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
 
             <h4 className='parrafo2-portada'>Te esperamos en la...</h4>
             <div className='parrafo2-div'>

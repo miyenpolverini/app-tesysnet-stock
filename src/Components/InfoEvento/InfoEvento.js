@@ -33,7 +33,7 @@ const InfoEvento = () => {
                 <h6 className='detail-info mb-5'>21 de Octubre 2022 - 20:00hs</h6>
             </div>
             <div>
-                <iframe className='contMaps' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.102692015653!2d-58.65434178435661!3d-34.60156466489198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbfa55fc3fa81%3A0xc0c4db8eab5784c5!2sJanos%20Hurlingham!5e0!3m2!1ses-419!2sar!4v1660950307272!5m2!1ses-419!2sar" width="600" height="450" title='mapa' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe className='contMaps' src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d52536.4879127532!2d-58.654926787729046!3d-34.61603204666166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x95bcbfa55fc3fa81%3A0xc0c4db8eab5784c5!2sjano%20hurlingham!3m2!1d-34.6015691!2d-58.6521531!5e0!3m2!1ses-419!2sar!4v1660952220810!5m2!1ses-419!2sar" width="600" height="450" title='mapa'  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
         </div>

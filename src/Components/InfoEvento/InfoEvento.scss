@@ -1,9 +1,9 @@
 .container-info{
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items:center;
-    gap: 5em;
+    gap: 4em;
     margin: 5em;
 }
 
@@ -29,3 +29,15 @@
     width: 18em;
 }
 
+
+@media only screen and (min-width: 990px) {
+
+    .container-info{
+        justify-content:space-between;
+        gap: 5em;
+
+    }
+    
+
+
+}

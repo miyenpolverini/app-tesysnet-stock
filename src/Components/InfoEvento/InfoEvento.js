@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './InfoEvento.scss'
 
 const InfoEvento = () => {
@@ -20,7 +20,7 @@ const InfoEvento = () => {
             <div>
             <iframe className='contMaps' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13138.04521917269!2d-58.9521968!3d-34.5912301!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcc11a1a80c9326f4!2sIglesia%20Nuestra%20Se%C3%B1ora%20de%20F%C3%A1tima!5e0!3m2!1ses-419!2sar!4v1660949760812!5m2!1ses-419!2sar" width="600" height="450" title='mapa2' allowfullscreen="" loading="lazy"></iframe>
             </div>
-
+ 
             <div>
                 <h4 className='detail-tit '>FIESTA</h4>
                 <h5 className='detail-info-tit mt-5'>Dirección</h5>

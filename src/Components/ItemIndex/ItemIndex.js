@@ -28,11 +28,13 @@ const ItemIndex = () => {
                 </div>
             </div>
 
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSduObXdLOEsNOO4aIB_j8a7NDvGRayxiRDYGDh-LtT6fED44A/viewform?embedded=true" width="640" height="1212" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+
             <h4 className='parrafo2-portada'>Te esperamos en la...</h4>
             <div className='parrafo2-div'>
                 <div>
                     <h5 className='parrafo2-contenido'>CEREMONIA</h5>
-                    <h6 className='parrafo2-contenido2'>....</h6>
+                    <h6 className='parrafo2-contenido2'>Iglesia Nuestra Señora de Fátima</h6>
                     <Link to={'/infoEvento'}>
                         <button className='botonLlegar'>
                             Como llegar<span className='btn-arrow'><IoIosArrowForward /></span>
@@ -41,7 +43,7 @@ const ItemIndex = () => {
                 </div>
                 <div>
                     <h5 className='parrafo2-contenido'>FIESTA</h5>
-                    <h6 className='parrafo2-contenido2'>JANOS HURLINGHAM</h6>
+                    <h6 className='parrafo2-contenido2'>Janos Hurlingham</h6>
                     <Link to={'/infoEvento'}>
                         <button className='botonLlegar'>
                             Como llegar<span className='btn-arrow'><IoIosArrowForward /></span>

@@ -1,15 +1,16 @@
 .container-info{
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items:center;
+    gap: 5em;
     margin: 5em;
 }
 
 .detail-tit{
     color: black;
     font-family: 'Poppins', sans-serif;
-    text-align: center;
+    text-align: left;
 }
 
 .detail-info-tit{

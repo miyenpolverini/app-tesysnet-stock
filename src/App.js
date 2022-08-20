@@ -11,12 +11,14 @@ import PurchaseCompleted from './Components/PurchaseCompleted/PurchaseCompleted'
 import InfoEvento from './Components/InfoEvento/InfoEvento';
 import Footer from './Components/Footer/Footer';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
     <div className="App">
       <AddCartContextProvider>
         <BrowserRouter>
+          <ScrollToTop />
           <NavBar />
           <div className="App-header">
             <Routes>

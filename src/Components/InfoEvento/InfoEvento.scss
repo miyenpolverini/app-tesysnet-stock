@@ -1,43 +1,56 @@
-.container-info{
+.container-info {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-around;
-    align-items:center;
-    gap: 4em;
+    justify-content:space-between;
+    
     margin: 5em;
+
 }
 
-.detail-tit{
+.box-evento {
+    display: flex;
+   
+    gap: 5em;
+    background-color: #e7eaee;
+    margin: 1em;
+    border: 1px solid #d6dae0;
+    border-radius: 10px;
+    transition: all 0.6s ease;
+    padding: 1em;
+    box-shadow: 0 12px 18px -6px rgba(0, 0, 0, 0.5);
+}
+
+.detail-tit {
     color: black;
     font-family: 'Poppins', sans-serif;
     text-align: left;
 }
 
-.detail-info-tit{
+.detail-info-tit {
     color: gray;
     font-family: 'Poppins', sans-serif;
     text-align: left;
 }
 
-.detail-info{
+.detail-info {
     color: black;
     font-family: 'Poppins', sans-serif;
     text-align: left;
 }
 
-.contMaps{
+.contMaps {
     width: 18em;
 }
 
 
-@media only screen and (min-width: 990px) {
+/* @media only screen and (min-width: 990px) {
 
     .container-info{
         justify-content:space-between;
-        gap: 5em;
+        
 
     }
     
 
-
 }
+ */

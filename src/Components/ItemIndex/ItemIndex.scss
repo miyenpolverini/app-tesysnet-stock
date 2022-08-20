@@ -137,3 +137,18 @@
     background-attachment:fixed;
     margin-top: -8em;
 }
+
+.formulario-asistencia{
+    width: 350px;
+    height: 1212px; 
+}
+
+@media only screen and (min-width: 990px) {
+
+    .formulario-asistencia{
+        width: 640px;
+        
+    }
+    
+
+}

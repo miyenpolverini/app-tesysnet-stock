@@ -1,16 +1,14 @@
 .container-info {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
-    
+    justify-content:space-around;
     margin: 5em;
 
 }
 
 .box-evento {
     display: flex;
-   
-    gap: 5em;
+    flex-wrap: wrap;
     background-color: #e7eaee;
     margin: 1em;
     border: 1px solid #d6dae0;
@@ -39,7 +37,8 @@
 }
 
 .contMaps {
-    width: 18em;
+    width: 30em;
+    height: 450px;
 }
 
 

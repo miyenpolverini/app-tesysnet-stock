@@ -1,7 +1,7 @@
 import React from 'react'
 import './ItemIndex.scss'
 import { Link } from 'react-router-dom'
-import { HashLink, NavHashLink } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 import { IoIosArrowForward } from "react-icons/io";
 
 const ItemIndex = () => {

@@ -3,11 +3,14 @@ import './ItemIndex.scss'
 import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link';
 import { IoIosArrowForward } from "react-icons/io";
+import videoInvitacion from '../video/videoInvitacion.mp4';
 
 const ItemIndex = () => {
     return (
         <div>
-            <img className='img-inicio' alt='foto portada' src='https://res.cloudinary.com/dw94zgfgu/image/upload/v1648512794/WhatsApp_Image_2022-03-28_at_9.12.50_PM_kylitz.jpg'></img>
+             <video className='img-inicio'  preload='auto' muted loop autoPlay src={videoInvitacion}></video>
+            
+         {/*    <img className='img-inicio' alt='foto portada' src='https://res.cloudinary.com/dw94zgfgu/image/upload/v1648512794/WhatsApp_Image_2022-03-28_at_9.12.50_PM_kylitz.jpg'></img> */}
             <div className='img-fondo'></div>
 
             <div id='formulario-asistencia' className='countdown-portada' uk-countdown="date: 2022-10-21T03:10:16+00:00">
@@ -28,13 +31,14 @@ const ItemIndex = () => {
                 </div>
             </div>
  
-            <iframe  className='formulario-asistencia'  src="https://docs.google.com/forms/d/e/1FAIpQLSduObXdLOEsNOO4aIB_j8a7NDvGRayxiRDYGDh-LtT6fED44A/viewform?embedded=true" title='formu-asistencia' frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+            <iframe className='formulario-asistencia' src="https://docs.google.com/forms/d/e/1FAIpQLSduObXdLOEsNOO4aIB_j8a7NDvGRayxiRDYGDh-LtT6fED44A/viewform?embedded=true" title='formu-asistencia' frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
 
             <h4 className='parrafo2-portada'>Te esperamos en la...</h4>
             <div className='parrafo2-div'>
                 <div>
                     <h5 className='parrafo2-contenido'>CEREMONIA</h5>
                     <h6 className='parrafo2-contenido2'>Iglesia Nuestra Señora de Fátima</h6>
+                    <h6 className='parrafo2-contenido3'>18hs</h6>
                     <Link to={'/infoEvento'}>
                         <button className='botonLlegar'>
                             Como llegar<span className='btn-arrow'><IoIosArrowForward /></span>
@@ -44,6 +48,7 @@ const ItemIndex = () => {
                 <div>
                     <h5 className='parrafo2-contenido'>FIESTA</h5>
                     <h6 className='parrafo2-contenido2'>Janos Hurlingham</h6>
+                    <h6 className='parrafo2-contenido3'>20hs</h6>
                     <HashLink to={'/infoEvento/#evento-fiesta'}>
                         <button className='botonLlegar'>
                             Como llegar<span className='btn-arrow'><IoIosArrowForward /></span>

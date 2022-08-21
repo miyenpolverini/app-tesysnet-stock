@@ -1,7 +1,7 @@
 import React from 'react'
 import './ItemIndex.scss'
 import { Link } from 'react-router-dom'
-import { NavHashLink } from 'react-router-hash-link';
+import { HashLink, NavHashLink } from 'react-router-hash-link';
 import { IoIosArrowForward } from "react-icons/io";
 
 const ItemIndex = () => {
@@ -44,11 +44,11 @@ const ItemIndex = () => {
                 <div>
                     <h5 className='parrafo2-contenido'>FIESTA</h5>
                     <h6 className='parrafo2-contenido2'>Janos Hurlingham</h6>
-                    <NavHashLink to={'/infoEvento/#evento-ceremonia'}>
+                    <HashLink to={'/infoEvento/#evento-fiesta'}>
                         <button className='botonLlegar'>
                             Como llegar<span className='btn-arrow'><IoIosArrowForward /></span>
                         </button>
-                    </NavHashLink>
+                    </HashLink>
                 </div>
             </div>
             <div className='parrafo-portada'>

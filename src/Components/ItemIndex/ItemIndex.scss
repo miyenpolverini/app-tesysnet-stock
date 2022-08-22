@@ -112,7 +112,6 @@
 
 
 
-
 .video-portada{
     height: 18em;
     width: 100%;
@@ -131,8 +130,12 @@
 }
 
 .img-final{
+    margin-top: 1em;
+    margin-bottom: 1em;
     width: 20em;
+    box-shadow: 0 12px 18px 6px rgba(0, 0, 0, 0.5);
 }
+
 
 .img-fondo{
     background-image: url(https://res.cloudinary.com/dw94zgfgu/image/upload/v1648516700/WhatsApp_Image_2022-03-28_at_10.04.14_PM_styvzk.jpg);

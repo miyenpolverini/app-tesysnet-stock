@@ -8,7 +8,7 @@ import videoInvitacion from '../video/videoInvitacion.mp4';
 const ItemIndex = () => {
     return (
         <div>
-             <video className='img-inicio'  preload='auto' muted loop autoPlay src={videoInvitacion}></video>
+             <video className='img-inicio'  preload='auto' muted autoPlay src={videoInvitacion}></video>
             
          {/*    <img className='img-inicio' alt='foto portada' src='https://res.cloudinary.com/dw94zgfgu/image/upload/v1648512794/WhatsApp_Image_2022-03-28_at_9.12.50_PM_kylitz.jpg'></img> */}
             <div className='img-fondo'></div>
@@ -64,7 +64,8 @@ const ItemIndex = () => {
             </div>
             <video className='video-portada' preload='auto' muted loop autoPlay src='https://video.wixstatic.com/video/11062b_7488edba38234bd69b0603ad498efdf5/720p/mp4/file.mp4'></video>
             <h5 className='tit-final'>¡Estamos muy contentos de poder compartir este día tan importante con ustedes!</h5>
-            <img className='img-final' alt='foto final' src='https://res.cloudinary.com/dw94zgfgu/image/upload/v1648488802/Flu_miyo_na7vzr.png'></img>
+            <img className='img-final' alt='foto nosotros' src='https://res.cloudinary.com/dw94zgfgu/image/upload/v1661126675/WhatsApp_Image_2022-08-21_at_8.58.28_PM_dzltro.jpg'></img>
+            {/* <img className='img-final' alt='foto final' src='https://res.cloudinary.com/dw94zgfgu/image/upload/v1648488802/Flu_miyo_na7vzr.png'></img> */}
         </div>
     )
 }

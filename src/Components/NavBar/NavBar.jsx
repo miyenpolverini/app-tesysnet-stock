@@ -10,11 +10,11 @@ const NavBar = () => {
 
     const { calculateCantTotal } = useContext(cartContext)
 
-    return (
+     return (
         <main>
             <nav className="navbar navbar-expand-lg navbar-light nav-index">
                 <div className="container-fluid">
-                    <HashLink className="navbar-brand" to={'/#'}>
+                    <HashLink className="navbar-brand" to={'/home#'}>
                         <h3 className='logoWedding'>#FLU & MIYO</h3>
                     </HashLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@ const NavBar = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav">
-                            <NavHashLink className="active menu-boot" to='/#formulario-asistencia'>
+                            <NavHashLink className="active menu-boot" to='/home#formulario-asistencia'>
                                 <div className='icon-calendar'>
                                     <GiConfirmed />
                                 </div>

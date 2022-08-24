@@ -61,9 +61,14 @@
     font-weight: bold;
     letter-spacing: 0.3em;
 }
+.parrafo2-contenido-fiesta{
+    color: rgb(94,92,92);
+    font-weight: bold;
+    letter-spacing: 0.3em;
+}
 
 .parrafo2-contenido2{
-    margin-top: 2em;
+    margin-top: 1em;
     color: black;
     font-family: 'Poppins', sans-serif;  
 }
@@ -136,6 +141,7 @@
 
 .tit-final{
    margin-top: 2em;
+   margin-bottom: 2em;
    color: black;
    font-family: 'Poppins', sans-serif;
 }
@@ -176,11 +182,14 @@
     height: 1212px; 
 }
 
-@media only screen and (min-width: 990px) {
+@media only screen and (max-width: 990px) {
 
     .formulario-asistencia{
         width: 640px;
         
+    }
+    .parrafo2-contenido-fiesta{
+        margin-top: 1.5em;
     }
     
 

@@ -54,7 +54,7 @@ const ItemIndex = () => {
                     </Link>
                 </div>
                 <div>
-                    <h5 className='parrafo2-contenido'>FIESTA</h5>
+                    <h5 className='parrafo2-contenido-fiesta'>FIESTA</h5>
                     <h6 className='parrafo2-contenido2'>Janos Hurlingham</h6>
                     <h6 className='parrafo2-contenido3'>20hs</h6>
                     <HashLink to={'/infoEvento/#evento-fiesta'}>

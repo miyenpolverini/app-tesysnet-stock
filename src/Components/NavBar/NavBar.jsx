@@ -1,18 +1,18 @@
 import React, { useContext, useState } from 'react';
 import cartContext from '../../Context/cartContext'
 import { Link } from 'react-router-dom';
-import { HashLink, NavHashLink  } from 'react-router-hash-link';
+import { HashLink, NavHashLink } from 'react-router-hash-link';
 import './NavBar.scss';
 import { BiCalendar } from "react-icons/bi";
 import { GiPresent, GiConfirmed } from "react-icons/gi";
-import { Fade  as Hamburger } from 'hamburger-react'
+import { Fade as Hamburger } from 'hamburger-react'
 
 const NavBar = () => {
 
     const { calculateCantTotal } = useContext(cartContext)
     const [isOpen, setOpen] = useState(false)
 
-     return (
+    return (
         <main>
             <nav className="navbar navbar-expand-lg navbar-light nav-index">
                 <div className="container-fluid">
@@ -20,8 +20,8 @@ const NavBar = () => {
                         <h3 className='logoWedding'>#FLU & MIYO</h3>
                     </HashLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                       {/*  <span className="navbar-toggler-icon"></span> */}
-                  <Hamburger size={24} toggled={isOpen} toggle={setOpen} /> 
+                        {/* <span className="navbar-toggler-icon"></span> */}
+                        <Hamburger size={22} distance="lg" toggled={isOpen} toggle={setOpen} />
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav">

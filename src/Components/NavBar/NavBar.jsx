@@ -21,7 +21,7 @@ const NavBar = () => {
                     </HashLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         {/* <span className="navbar-toggler-icon"></span> */}
-                        <Hamburger size={22} distance="lg" toggled={isOpen} toggle={setOpen} />
+                        <Hamburger rounded size={22} distance="lg" duration={0.8} toggled={isOpen} toggle={setOpen} />
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav">

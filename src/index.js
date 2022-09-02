@@ -8,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 /* uikit */
 import "uikit/dist/js/uikit.min.js"; 
+/* animation  */
+import 'aos/dist/aos.css';
 
 
 createRoot(

@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './ItemIndex.scss'
 import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link';
 import { IoIosArrowForward } from "react-icons/io";
-import videoInvitacion from '../video/videoInvitacion.mp4';
+import Aos from 'aos';
+/* import videoInvitacion from '../video/videoInvitacion.mp4'; */
 
 const ItemIndex = () => {
+
+    useEffect(() => {
+        Aos.init({ duration: 3000 });
+    }, [])
+
     return (
         <div>
-            <video className='img-inicio' preload='auto' muted autoPlay src={videoInvitacion}></video>
+            {/* <video className='img-inicio' preload='auto' muted autoPlay src={videoInvitacion}></video> */}
 
-            {/*    <img className='img-inicio' alt='foto portada' src='https://res.cloudinary.com/dw94zgfgu/image/upload/v1648512794/WhatsApp_Image_2022-03-28_at_9.12.50_PM_kylitz.jpg'></img> */}
+            <img data-aos='fade-down' className='img-inicio' alt='foto portada' src='https://res.cloudinary.com/dw94zgfgu/image/upload/v1662091432/WhatsApp_Image_2022-09-01_at_7.39.05_PM_kxhodz.jpg'></img>
             <div className='img-fondo'></div>
 
             <div id='formulario-asistencia' className='countdown-portada' uk-countdown="date: 2022-10-21T03:10:16+00:00">

@@ -16,10 +16,13 @@ const ItemIndex = () => {
         <div>
             {/* <video className='img-inicio' preload='auto' muted autoPlay src={videoInvitacion}></video> */}
 
-            <img data-aos='fade-down' className='img-inicio' alt='foto portada' src='https://res.cloudinary.com/dw94zgfgu/image/upload/v1662091432/WhatsApp_Image_2022-09-01_at_7.39.05_PM_kxhodz.jpg'></img>
+            <img data-aos="zoom-in" className='img-inicio' alt='foto portada' src='https://res.cloudinary.com/dw94zgfgu/image/upload/v1662091432/WhatsApp_Image_2022-09-01_at_7.39.05_PM_kxhodz.jpg'></img>
             <div className='img-fondo'></div>
 
-            <div id='formulario-asistencia' className='countdown-portada' uk-countdown="date: 2022-10-21T03:10:16+00:00">
+            <div data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay="300"
+                data-aos-offset="0" id='formulario-asistencia' className='countdown-portada' uk-countdown="date: 2022-10-21T03:10:16+00:00">
                 <div>
                     <div className="uk-countdown-number uk-countdown-days count-det"></div>
                 </div>
@@ -79,7 +82,7 @@ const ItemIndex = () => {
             <video className='video-portada' preload='auto' muted loop autoPlay src='https://video.wixstatic.com/video/11062b_7488edba38234bd69b0603ad498efdf5/720p/mp4/file.mp4'></video>
             <h5 className='tit-final'>¡Estamos muy contentos de poder compartir este día tan importante con ustedes!</h5>
             <div className='img-final-contenido'>
-                <img className='img-final' alt='foto nosotros' src='https://res.cloudinary.com/dw94zgfgu/image/upload/v1661126675/WhatsApp_Image_2022-08-21_at_8.58.28_PM_dzltro.jpg'></img>
+                <img data-aos="zoom-in" className='img-final' alt='foto nosotros' src='https://res.cloudinary.com/dw94zgfgu/image/upload/v1661126675/WhatsApp_Image_2022-08-21_at_8.58.28_PM_dzltro.jpg'></img>
             </div>
             {/* <img className='img-final' alt='foto final' src='https://res.cloudinary.com/dw94zgfgu/image/upload/v1648488802/Flu_miyo_na7vzr.png'></img> */}
         </div>

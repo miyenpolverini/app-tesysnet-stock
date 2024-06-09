@@ -14,7 +14,7 @@
     "daisyui": "2.15.2",
     "firebase": "9.6.10",
     "hamburger-react": "2.5.0",
-    "node-sass": "7.0.1",
+    "node-sass": "^7.0.1",
     "react": "18.0.0",
     "react-bootstrap": "2.2.3",
     "react-daisyui": "2.0.2",
@@ -25,6 +25,7 @@
     "react-router-dom": "6.3.0",
     "react-router-hash-link": "2.4.3",
     "react-scripts": "5.0.0",
+    "sass": "^1.77.4",
     "uikit": "3.14.1",
     "web-vitals": "2.1.4"
   },

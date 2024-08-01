@@ -1,16 +1,14 @@
 import React from 'react'
 import './Item.scss'
 import Popup from '../Popup/Popup'
-import { Link } from 'react-router-dom'
 import { useContext, useState } from 'react'
 import cartContext from '../../Context/cartContext'
 import { dataBase } from '../../services/firebase/firebase'
-import { doc, updateDoc, increment, collection, getDocs, query, where, orderBy } from "firebase/firestore";
+import { doc, updateDoc, increment, collection, getDocs, query, orderBy } from "firebase/firestore";
 import { GoDash } from "react-icons/go";
 import { FaPlus } from "react-icons/fa";
 import Button from 'react-bootstrap/Button';
 import { FaPencilAlt } from "react-icons/fa";
-import { GrUpdate } from "react-icons/gr";
 import { lineSpinner } from 'ldrs'
 
 
@@ -25,7 +23,7 @@ const ItemTodos = ({ producto }) => {
     const [id, setId] = useState('')
     const [newPrice, setNewPrice] = useState('')
 
-    const { parseNumber, removeProducto, loaderStock, setLoaderStock, setTotalStock, totalStock, setProducts, products } = useContext(cartContext)
+    const { parseNumber, loaderStock, setLoaderStock, setTotalStock, setProducts } = useContext(cartContext)
 
 
     const substractStock = (idProducto, stockProducto) => {

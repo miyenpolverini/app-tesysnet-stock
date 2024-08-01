@@ -1,20 +1,15 @@
 import React, { useState, useContext, useRef } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
 import cartContext from '../../Context/cartContext'
 import './ItemNuevo.scss'
 import { dataBase } from '../../services/firebase/firebase'
-import { collection, addDoc, writeBatch, getDocs, query, where, Timestamp } from 'firebase/firestore'
+import { collection, addDoc, writeBatch, getDocs, query, where } from 'firebase/firestore'
 import Loader from '../../Loader'
 
 const ItemNuevo = () => {
 
-    const style = {
-        height: '100px'
-    }
 
     const { loadOrder, SetNotification, setNotifAdd, notifAdd, setNotifDel, notifDel } = useContext(cartContext)
 
-    let navigate = useNavigate()
 
     const [stock, setStock] = useState(false)
     const [error, setError] = useState(false)
@@ -96,13 +91,6 @@ const ItemNuevo = () => {
 
     }
 
-
-    const [isActive, setActive] = useState(["false", "false"]);
-
-    const handleTogge = (index) => {
-
-        setActive(!isActive);
-    }
 
 
     return (

@@ -1,10 +1,9 @@
 import React, { useContext, useState } from 'react';
 import cartContext from '../../Context/cartContext'
 import { Link } from 'react-router-dom';
-import { HashLink, NavHashLink } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 import './NavBar.scss';
 import { BiCalendar } from "react-icons/bi";
-import { GiPresent, GiConfirmed } from "react-icons/gi";
 import { FaBoxOpen } from "react-icons/fa";
 import { MdAddToPhotos } from "react-icons/md";
 import { Fade as Hamburger } from 'hamburger-react'

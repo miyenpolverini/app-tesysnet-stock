@@ -1,7 +1,6 @@
 import React from 'react'
 import './Item.scss'
 import Popup from '../Popup/Popup'
-import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import cartContext from '../../Context/cartContext'
 import { dataBase } from '../../services/firebase/firebase'
@@ -20,7 +19,7 @@ const Item = ({ producto }) => {
 
     lineSpinner.register()
 
-    const { parseNumber, removeProducto, loaderStock, setLoaderStock, setTotalStock, totalStock, setProducts, products } = useContext(cartContext)
+    const { parseNumber, loaderStock, setLoaderStock, setTotalStock, totalStock, setProducts } = useContext(cartContext)
 
 
     const substractStock = (idProducto, stockProducto) => {

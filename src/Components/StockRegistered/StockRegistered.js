@@ -1,11 +1,10 @@
-import React, { useContext } from 'react'
-import cartContext from '../../Context/cartContext'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './StockRegistered.scss'
 
 const StockRegistered = () => {
 
-    const { order } = useContext(cartContext)
+
 
     return (
         <div className='container-compra'>

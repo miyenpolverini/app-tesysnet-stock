@@ -4,7 +4,7 @@ import { useState, useEffect, useContext } from "react"
 import { useParams } from "react-router-dom"
 import Loader from "../../Loader"
 import { dataBase } from '../../services/firebase/firebase'
-import { collection, getDocs, query, where, orderBy } from 'firebase/firestore'
+import { collection, getDocs, query, orderBy } from 'firebase/firestore'
 import cartContext from '../../Context/cartContext'
 
 

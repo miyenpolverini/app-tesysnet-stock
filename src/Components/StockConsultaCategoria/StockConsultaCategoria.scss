@@ -1,0 +1,38 @@
+/* .itemConsulta{
+    height: 78vh;
+} */
+
+.formConsulta{
+    width: 400px;
+    margin:0 auto;
+}
+
+.botonStock{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    width: 180px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px 10px;
+    background-color:rgba(22, 87, 151, 0.9);
+    border: rgba(30, 144, 255, .9);
+}
+
+.botonStock:hover{
+    background-color: darkblue ;
+}
+
+
+@media only screen and (max-width: 990px) {
+
+    .titOrder{
+        width: 400px;
+    }
+
+    .table-histories{
+        width: 400px;
+    }
+    
+  
+  }

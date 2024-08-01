@@ -1,10 +1,12 @@
 {
-  "name": "app-wed-01",
+  "name": "app-tesys-stock",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@headlessui/react": "1.6.4",
     "@heroicons/react": "1.0.6",
+    "@nextui-org/react": "2.4.6",
+    "@nextui-org/table": "2.0.39",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "12.1.4",
     "@testing-library/user-event": "13.5.0",
@@ -14,6 +16,7 @@
     "daisyui": "2.15.2",
     "firebase": "9.6.10",
     "hamburger-react": "2.5.0",
+    "ldrs": "1.0.2",
     "node-sass": "^7.0.1",
     "react": "18.0.0",
     "react-bootstrap": "2.2.3",
@@ -25,6 +28,7 @@
     "react-router-dom": "6.3.0",
     "react-router-hash-link": "2.4.3",
     "react-scripts": "5.0.0",
+    "react-table": "^7.8.0",
     "sass": "^1.77.4",
     "uikit": "3.14.1",
     "web-vitals": "2.1.4"
@@ -52,8 +56,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "tailwindcss": "3.0.24"
   }
 }

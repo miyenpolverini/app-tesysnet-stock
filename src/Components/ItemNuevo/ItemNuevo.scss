@@ -1,0 +1,81 @@
+.form-compra{
+    color: black;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.titleForm{
+    color: black;
+    font-weight: bolder;  
+    margin-top: 14px;
+}
+
+.titleError{
+    color: red;
+    font-weight: bolder;  
+    margin-top: 14px;
+}
+
+.form{
+    width: 400px;
+    margin:0 auto;   
+}
+
+.btnCargar{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color:rgba(22, 87, 151, 0.9);
+    border: rgba(30, 144, 255, .9);
+    margin-left: 20px;
+    margin: 10px;
+}
+
+.btnVolver{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color:rgba(22, 87, 151, 0.9);
+    border: rgba(30, 144, 255, .9);
+    margin-left: 20px;
+    margin: 10px;
+}
+
+.btnCargar:hover,
+.btnVolver:hover{
+    background-color: darkblue;
+}
+
+
+
+.table-odontograma{
+    margin-left: -100px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    width: 600px;
+    height: 80px;
+    color: white;
+}
+
+
+.table-odontograma:hover{
+    cursor: pointer;
+}
+
+.color{
+    background-color: blue;
+    
+    
+  }
+
+.color1{
+    background-color: red;
+    
+   
+  }

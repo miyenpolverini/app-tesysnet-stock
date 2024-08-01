@@ -192,7 +192,7 @@ const ItemListContainer = (props) => {
 
                 try {
 
-                    const QuerySnapshot = await getDocs(query(collection(dataBase, 'regalos'), orderBy('category')))
+                    const QuerySnapshot = await getDocs(query(collection(dataBase, 'cartuchos'), orderBy('codigo')))
                     const products = QuerySnapshot.docs.map(doc => {
 
                         return { id: doc.id, ...doc.data() }

@@ -1,114 +1,89 @@
-import React from 'react'
-import './Popup.scss'
-import { useState, useEffect, useContext } from 'react';
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import { dataBase } from '../../services/firebase/firebase'
+import { doc, deleteDoc, collection, getDocs, query, where, orderBy } from "firebase/firestore";
+import { useContext } from 'react'
 import cartContext from '../../Context/cartContext'
-import { Button, Modal } from 'react-bootstrap';
-import { getDoc, doc } from "firebase/firestore"
-import { dataBase } from "../../services/firebase/firebase"
-import { Link } from 'react-router-dom'
-import ItemCount from '../ItemCount/ItemCount';
+import './Popup.scss'
 
+const Popup = ({ idProducto }) => {
 
-const Popup = ({ prodId }) => {
+    const { setLoaderStock, setTotalStock, setProducts } = useContext(cartContext)
 
-    const [modalShow, setModalShow] = useState(false)
-    const [item, setItem] = useState([])
-    const [btnAgregar, setBtnAgregar] = useState(true)
+    const [show, setShow] = useState(false)
 
-    const { addCarrito, parseNumber, SetNotification, setNotifAdd, notifAdd } = useContext(cartContext)
+    const removeProducto = (idProducto) => {
 
+        setShow(false)
 
-    useEffect(() => {
+        /* activo el loader */
+        setLoaderStock(true)
 
-        getDoc(doc(dataBase, 'regalos', prodId)).then((QuerySnapshot) => {
+        // Elimino el producto de firebase
+        const productoRef = doc(dataBase, "productos", idProducto);
+        (async () => {
+            try {
+                await deleteDoc(productoRef)
+            } catch (error) {
+                console.log('error', error)
+            }
+        })()
 
-            const item = { id: QuerySnapshot.id, ...QuerySnapshot.data() }
-            setItem(item)
+        // Vuelvo a consultar el stock de firebase
+        setTimeout(() => {
+            getDocs(query(collection(dataBase, 'productos'), where('categoria', '==', 'cartuchos'), orderBy('codigo', 'asc'))).then((QuerySnapshot) => {
 
-        }).catch((error) => {
-            console.log('Error conexion firebase', error)
-        }).finally(() => {
-            console.log('finalizo')
-        })
+                const products = QuerySnapshot.docs.map(doc => {
 
+                    return { id: doc.id, ...doc.data() }
+                })
 
-        return (() => {
-            setItem([])
-        })
+                setProducts(products)
 
+                //calculo el total y lo seteo en un estado
+                let total = 0
+                for (let i = 0; i < products.length; i++) {
+                    let objeto_producto = products[i]
+                    total = total + (parseInt(objeto_producto.stock))
+                }
+                setTotalStock(total)
 
-    }, [prodId])
+            }).catch((error) => {
+                console.log('Error conexion firebase', error)
+            }).finally(() => {
+                /* desactivo el loader */
+                setLoaderStock(false)
+            })
+        }, 1500)
 
-    const agregarCarrito = (contador) => {
-
-        setNotifAdd(true)
-        addCarrito(item.id, item.detail, item.price, item.img, contador)
-        setBtnAgregar(false)
     }
 
-
-
-    function MyVerticallyCenteredModal(props) {
-
-        const ButtonViewCart = () => {
-            return (
-                <div>
-                    <button className='btnAgregarModal' onClick={props.onHide}>Agregar otro regalo</button>
-                    <Link to={'/cart'}>
-                        <button className='btnIrCarrito'>Continuar</button>
-                    </Link>
-                </div>
-            )
-        }
-
-
-        return (
-            <Modal
-                {...props}
-                size="lg"
-                aria-labelledby="contained-modal-title-vcenter"
-                centered>
-                <Modal.Header closeButton>
-                    <Modal.Title id="contained-modal-title-vcenter">
-                        <h2>{item.detail}</h2>
-                    </Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <div className="modalDetalle">
-                        <div>
-                            <img className="modalImg" src={item.img} alt={item.name}></img>
-                        </div>
-                        <div>
-                            <p className='modalCarac'>{item.include}</p>
-                            <h4 className="modalPrecio">$ {item.price}</h4>
-                            {btnAgregar ? <ItemCount onAdd={(contador) => agregarCarrito(contador)} stock={item.stock} initial={1} />
-                                : <ButtonViewCart />}
-                        </div>
-                    </div>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant='secondary' onClick={props.onHide}>Cerrar</Button>
-                </Modal.Footer>
-            </Modal>
-        );
-    }
-
-
-
+    const handleClose = () => setShow(false)
+    const handleShow = () => setShow(true)
 
     return (
         <>
-            <Button className='btn-modal' variant='secondary' onClick={() => setModalShow(true)}>
-                REGALÁ
+            <Button variant="danger" onClick={handleShow}>
+                <img className='tachito' src='https://res.cloudinary.com/dw94zgfgu/image/upload/v1721439643/delete-svgrepo-com_2_twbezu.png' alt='carrito-lleno'
+                ></img>
             </Button>
-            <MyVerticallyCenteredModal
-                show={modalShow}
-                onHide={() => setModalShow(false)}
-            />
+
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>¿Desea eliminar el producto?</Modal.Title>
+                </Modal.Header>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        No
+                    </Button>
+                    <Button variant="danger" onClick={() => removeProducto(idProducto)}>
+                        Si, eliminar
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </>
-    )
+    );
 }
 
 export default Popup
-
-

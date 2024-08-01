@@ -3,6 +3,13 @@ import { AddCartContextProvider } from './Context/cartContext';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './Components/NavBar/NavBar';
 import ItemIndex from './Components/ItemIndex/ItemIndex';
+import StockConsulta from './Components/StockConsulta/StockConsulta';
+import StockConsultaCategoria from './Components/StockConsultaCategoria/StockConsultaCategoria';
+import ItemListCables from './Components/ItemListContainer/ItemListCables';
+import ItemListCartuchos from './Components/ItemListContainer/ItemListCartuchos';
+import ItemNuevo from './Components/ItemNuevo/ItemNuevo';
+import StockRegistered from './Components/StockRegistered/StockRegistered';
+
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './Components/ItemListContainer/ItemDetailContainer';
 import Cart from './Components/Cart/Cart';
@@ -24,8 +31,13 @@ function App() {
             <Routes>
               <Route path='/' element={<ItemIndex />}></Route>
               <Route path='/home' element={<ItemIndex />}></Route>
-              <Route path='/regalos' element={<ItemListContainer />}></Route>
-              <Route path='/category/:categoryId' element={<ItemListContainer />}></Route>
+              <Route path='/stock' element={<StockConsulta />}></Route>
+              <Route path='/consultar-por-categoria' element={<StockConsultaCategoria />}></Route>
+              <Route path='/consultar-por-cables' element={<ItemListCables />}></Route>
+              <Route path='/consultar-por-cartuchos' element={<ItemListCartuchos />}></Route>
+              <Route path='/agregar-producto' element={<ItemNuevo />}></Route>
+              <Route path='/stockRegistered' element={<StockRegistered />}></Route>
+              <Route path='/category/:categoryId' element={<ItemListCartuchos />}></Route>
               <Route path='/detail/:paramId' element={<ItemDetailContainer />}></Route>
               <Route path='/cart' element={<Cart />}></Route>
               <Route path='/formBuy' element={<PrivateRoute privType='formBuy'><FormBuy /></PrivateRoute>}></Route>

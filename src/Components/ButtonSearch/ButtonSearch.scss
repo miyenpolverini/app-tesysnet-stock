@@ -1,0 +1,102 @@
+.input-search{
+    width: 12em;
+    margin:0 auto;
+}
+
+.buttonSearch{
+    font-family: 'Poppins', sans-serif;
+    
+    
+}
+
+.titleErrorSearch{
+    color: red;
+    font-weight: bolder;  
+    font-size: 0.8em;
+    margin-top: 10px;
+
+    animation-name: slideDown;
+	-webkit-animation-name: slideDown;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+
+	visibility: visible !important;	
+}
+
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	50%{
+		transform: translateY(8%);
+	}
+	65%{
+		transform: translateY(-4%);
+	}
+	80%{
+		transform: translateY(4%);
+	}
+	95%{
+		transform: translateY(-2%);
+	}			
+	100% {
+		transform: translateY(0%);
+	}		
+}
+
+@-webkit-keyframes slideDown {
+	0% {
+		-webkit-transform: translateY(-100%);
+	}
+	50%{
+		-webkit-transform: translateY(8%);
+	}
+	65%{
+		-webkit-transform: translateY(-4%);
+	}
+	80%{
+		-webkit-transform: translateY(4%);
+	}
+	95%{
+		-webkit-transform: translateY(-2%);
+	}			
+	100% {
+		-webkit-transform: translateY(0%);
+	}	
+}
+
+.inputBuscar{
+	width: 14em !important;
+  }
+  
+
+  
+  .containerInput{
+	align-items: end;
+	right: 0;
+	display: flex;
+	justify-content: flex-end;
+	padding-bottom: 25px;
+  }
+  
+  @media (max-width: 988px){
+	
+	.inputBuscar{
+	  width: 100% !important;
+	}
+  
+	.App{
+	  padding: 40px 5px;
+	}
+  
+	
+  .containerInput{
+	padding-bottom: 15px;
+  }
+  
+  }

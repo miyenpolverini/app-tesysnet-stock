@@ -5,7 +5,10 @@ import { HashLink, NavHashLink } from 'react-router-hash-link';
 import './NavBar.scss';
 import { BiCalendar } from "react-icons/bi";
 import { GiPresent, GiConfirmed } from "react-icons/gi";
+import { FaBoxOpen } from "react-icons/fa";
+import { MdAddToPhotos } from "react-icons/md";
 import { Fade as Hamburger } from 'hamburger-react'
+import logo from '../../logotesys.png'
 
 const NavBar = () => {
 
@@ -17,7 +20,7 @@ const NavBar = () => {
             <nav className="navbar navbar-expand-lg navbar-light nav-index">
                 <div className="container-fluid">
                     <HashLink className="navbar-brand" to={'/home#'}>
-                        <h3 className='logoWedding'>#FLÚ & MIYO</h3>
+                        <img src={logo} alt="logo principal" className="img-responsive" />
                     </HashLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         {/* <span className="navbar-toggler-icon"></span> */}
@@ -25,20 +28,21 @@ const NavBar = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav">
-                            <NavHashLink className="active menu-boot" to='/home#formulario-asistencia'>
+
+                            <Link className="active menu-boot" to={'/stock'}>
                                 <div className='icon-calendar'>
-                                    <GiConfirmed />
+                                    <FaBoxOpen />
                                 </div>
                                 <div>
-                                    <p className='info'>ASISTENCIA</p>
+                                    <p className='info'>STOCK</p>
                                 </div>
-                            </NavHashLink>
-                            <Link className="active menu-boot" to={'/regalos'}>
+                            </Link>
+                            <Link className="active menu-boot" to={'/agregar-producto'}>
                                 <div className='icon-calendar'>
-                                    <GiPresent />
+                                    <MdAddToPhotos />
                                 </div>
                                 <div>
-                                    <p className='info'>REGALOS</p>
+                                    <p className='info'>AGREGAR PRODUCTO</p>
                                 </div>
                             </Link>
                             <Link className="active menu-boot" to={'/infoEvento'}>

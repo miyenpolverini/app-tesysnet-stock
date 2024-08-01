@@ -5,13 +5,18 @@ const Context = React.createContext()
 
 export const AddCartContextProvider = ({ children }) => {
 
+    const [totalStock, setTotalStock] = useState(0)
     const [carrito, setCarrito] = useState([])
     const [order, setOrder] = useState('')
     const [email, setEmail] = useState('')
     const [notifAdd, setNotifAdd] = useState(false)
     const [notifDel, setNotifDel] = useState(false)
 
-    const [category, setCategory] = useState('')
+
+    const [loaderStock, setLoaderStock] = useState(false)
+    const [products, setProducts] = useState([])
+    const [tableProducts, setTableProducts] = useState([])
+    const [marca, setMarca] = useState('')
     const [price, setPrice] = useState('')
 
     /* FUNCIONES */
@@ -124,12 +129,12 @@ export const AddCartContextProvider = ({ children }) => {
                     props.message === 'add' ?
                         <div className='notif-add animate__animated animate__slideInUp'>
                             <AiOutlineCheckCircle />
-                            <h4 className='notif-name'>¡Listo! Regalo agregado</h4>
+                            <h4 className='notif-name'>¡Listo! Producto agregado</h4>
                         </div>
                         :
                         <div className='notif-delete animate__animated animate__slideInUp'>
                             <AiOutlineCloseCircle />
-                            <h4 className='notif-name'>Regalo eliminado de la lista</h4>
+                            <h4 className='notif-name'>Producto eliminado</h4>
                         </div>
                 }
             </>
@@ -143,7 +148,7 @@ export const AddCartContextProvider = ({ children }) => {
         <Context.Provider value={{
             addCarrito, removeProducto, calculateCantTotal, calculatePrecioTotal,
             emptyCart, parseNumber, carrito, loadOrder, order, saveEmail, email, SetNotification, setNotifAdd, notifAdd, notifDel,
-            category, setCategory, price, setPrice
+            marca, setMarca, price, setPrice, totalStock, setTotalStock, products, setProducts, tableProducts, setTableProducts, loaderStock, setLoaderStock
         }}>
             {children}
         </Context.Provider>

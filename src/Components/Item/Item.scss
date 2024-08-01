@@ -1,15 +1,74 @@
+/* LOADER */
+.loaderStock {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    margin: -2.5em 0 0 -1.5em;
+  }
+
+.tacho{
+    border-bottom: 0px;
+}
+
+.table-scroll{
+    height: 30em;
+    overflow-y: auto;
+    font-size: 0.9em; 
+}
+
 .tarjetas {
     display: inline-block;
     flex-wrap: wrap;
     align-items: center;
     font-family: 'Roboto', sans-serif;
  }
+ .table-tit-cod{
+    width: 5em;
+}
+.table-tit-marca{
+    width: 10em;
+}
 
-/* .tarjetas:hover{
-    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.table-tit-det{
+    width: 25em;
+}
+
+.table-tit-precio{
+    width: 11em;
+}
+
+.table-tit-stock{
+    width: 4em;
+}
+
+.celda-formato1{
+    text-align: left;
+    vertical-align:middle;
+}
+
+.celda-formato2{
+    text-align: center;
+    vertical-align:middle;
+}
+
+/* ICONOS  */
+
+.iconUpdate{
+    width: 1em;
+}
+
+.iconUpdate:hover{
     cursor: pointer;
-    opacity: .6;
-} */
+}
+
+.iconStock{
+    width: 15px;
+}
+
+.iconStock:hover{
+    cursor: pointer;
+}
 
 .tarjeta:hover{
     img{
@@ -25,6 +84,17 @@
     }
 }
 
+.titStock{
+    font-weight: bolder;
+    text-align: right;
+    font-size: 1em;
+}
+
+.totalStock{
+    font-weight: bolder;
+    text-align: center;
+    font-size: 1em;
+}
 
 .tarjetas:hover .detalleProd {
     display: block; 
@@ -285,11 +355,13 @@
 //COMBO
 
 .combo-category{ 
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-evenly;
+    margin-bottom: 2em;
+   
+    
 }
 
 .combo-category select{

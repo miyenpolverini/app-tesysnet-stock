@@ -213,29 +213,30 @@ const ItemTodos = ({ producto }) => {
                             </div >
                         }
                         <div className="table-scroll">
-                            <table className="table table-bordered border-secondary table-light table-hover table-productos">
-                                <thead>
-                                    <tr>
-                                        <th className='table-dark table-tit-cod' scope="col">Código</th>
-                                        <th className='table-dark table-tit-marca' scope="col">Categoría</th>
-                                        <th className='table-dark table-tit-marca' scope="col">Marca</th>
-                                        <th className='table-dark table-tit-det' scope="col">Detalle</th>
-                                        <th className='table-dark table-tit-precio' scope="col">Precio</th>
-                                        <th className='table-dark table-tit-stock' scope="col">Stock</th>
-                                        <th className='table-dark table-tit-tach' scope="col"></th>
-                                        <th className='table-dark table-tit-tach' scope="col"></th>
-                                        <th className='table-dark table-tit-tach' scope="col"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {producto.map(product => {
-                                        return (
-                                            <tr key={product.id}>
-                                                <td className='celda-formato1'>{product.codigo}</td>
-                                                <td className='celda-formato1'>{product.categoria.toUpperCase()}</td>
-                                                <td className='celda-formato2'>{product.marca.toUpperCase()}</td>
-                                                <td className='celda-formato1'>{product.nombre.toUpperCase()}</td>
-                                                {isDesktopOrLaptop ?
+                            <div className="table-container">
+                                <table className="table table-bordered border-secondary table-light table-hover table-productos">
+                                    <thead>
+                                        <tr>
+                                            <th className='table-dark table-tit-cod' scope="col">Código</th>
+                                            <th className='table-dark table-tit-marca' scope="col">Categoría</th>
+                                            <th className='table-dark table-tit-marca' scope="col">Marca</th>
+                                            <th className='table-dark table-tit-det' scope="col">Detalle</th>
+                                            <th className='table-dark table-tit-precio' scope="col">Precio</th>
+                                            <th className='table-dark table-tit-stock' scope="col">Stock</th>
+                                            <th className='table-dark table-tit-tach' scope="col"></th>
+                                            <th className='table-dark table-tit-tach' scope="col"></th>
+                                            <th className='table-dark table-tit-tach' scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {producto.map(product => {
+                                            return (
+                                                <tr key={product.id}>
+                                                    <td className='celda-formato1'>{product.codigo}</td>
+                                                    <td className='celda-formato1'>{product.categoria.toUpperCase()}</td>
+                                                    <td className='celda-formato2'>{product.marca.toUpperCase()}</td>
+                                                    <td className='celda-formato1'>{product.nombre.toUpperCase()}</td>
+                                                    {/*  <td className='celda-formato1'>$ {parseNumber(product.precio)}</td> */}
                                                     <td className='celda-formato2'>
                                                         {id === product.id && editable ?
                                                             <div className="input-group">
@@ -260,19 +261,17 @@ const ItemTodos = ({ producto }) => {
                                                             </div>
                                                         }
                                                     </td>
-                                                    :
-                                                    <td className='celda-formato1'>$ {parseNumber(product.precio)}</td>
-                                                }
-                                                <td className='celda-formato2'>{product.stock}</td>
-                                                <td className='celda-formato2'><GoDash className='iconStock' onClick={() => substractStock(product.id, product.stock)} /></td>
-                                                <td className='celda-formato2'><FaPlus className='iconStock' onClick={() => addStock(product.id)} /></td>
-                                                <td className='celda-formato2'><Popup idProducto={product.id} /></td>
-                                            </tr>
-                                        )
-                                    })}
+                                                    <td className='celda-formato2'>{product.stock}</td>
+                                                    <td className='celda-formato2'><GoDash className='iconStock' onClick={() => substractStock(product.id, product.stock)} /></td>
+                                                    <td className='celda-formato2'><FaPlus className='iconStock' onClick={() => addStock(product.id)} /></td>
+                                                    <td className='celda-formato2'><Popup idProducto={product.id} /></td>
+                                                </tr>
+                                            )
+                                        })}
 
-                                </tbody>
-                            </table>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div >
             }

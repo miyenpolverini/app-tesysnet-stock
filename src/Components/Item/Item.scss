@@ -5,16 +5,23 @@
     top: 50%;
     z-index: 1;
     margin: -4em 0 0 -1.5em;
-  }
+}
 
-.tacho{
+.tacho {
     border-bottom: 0px;
 }
 
-.table-scroll{
+.table-scroll {
+    overflow: auto;
+    font-size: 0.9em;
+}
+
+.table-container {
     height: 30em;
-    overflow-y: auto;
-    font-size: 0.9em; 
+    width: 100%;
+    table {
+        width: 100%;
+    }
 }
 
 .tarjetas {
@@ -22,91 +29,93 @@
     flex-wrap: wrap;
     align-items: center;
     font-family: 'Roboto', sans-serif;
- }
- .table-tit-cod{
+}
+
+.table-tit-cod {
     width: 5em;
 }
-.table-tit-marca{
+
+.table-tit-marca {
     width: 10em;
 }
 
-.table-tit-det{
+.table-tit-det {
     width: 25em;
 }
 
-.table-tit-precio{
+.table-tit-precio {
     width: 11em;
 }
 
-.table-tit-stock{
+.table-tit-stock {
     width: 4em;
 }
 
-.celda-formato1{
+.celda-formato1 {
     text-align: left;
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
-.celda-formato2{
+.celda-formato2 {
     text-align: center;
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
 /* ICONOS  */
 
-.iconUpdate{
+.iconUpdate {
     width: 1em;
 }
 
-.iconUpdate:hover{
+.iconUpdate:hover {
     cursor: pointer;
 }
 
-.iconStock{
+.iconStock {
     width: 15px;
 }
 
-.iconStock:hover{
+.iconStock:hover {
     cursor: pointer;
 }
 
-.tarjeta:hover{
-    img{
+.tarjeta:hover {
+    img {
         opacity: .5;
     }
-    
-    .tarjeta-boton{
-        background-color:rgb(94, 88, 88);
+
+    .tarjeta-boton {
+        background-color: rgb(94, 88, 88);
     }
-    
-    .tarjeta-desc{
+
+    .tarjeta-desc {
         opacity: 1;
     }
 }
 
-.titStock{
+.titStock {
     font-weight: bolder;
     text-align: right;
     font-size: 1em;
 }
 
-.totalStock{
+.totalStock {
     font-weight: bolder;
     text-align: center;
     font-size: 1em;
 }
 
 .tarjetas:hover .detalleProd {
-    display: block; 
+    display: block;
 }
 
 .tarjeta {
     width: 10em;
-    padding: 1em;   
-    
+    padding: 1em;
+
 }
 
-.tarjeta-desc{
+.tarjeta-desc {
     text-align: center;
     color: black;
     font-family: 'Poppins', sans-serif;
@@ -123,7 +132,7 @@
     border-radius: 50%;
 }
 
-.tarjeta-boton{
+.tarjeta-boton {
     font-family: 'Poppins', sans-serif;
     font-size: 0.8rem;
     color: white;
@@ -131,12 +140,12 @@
     padding: 0.5em;
     border-radius: 10px;
     margin: 1em;
-    background-color:rgba(0, 128, 0, .5);
+    background-color: rgba(0, 128, 0, .5);
     border: rgba(30, 144, 255, .9);
     transition: all 500ms ease-out;
 }
 
-.tarjeta-contenido{
+.tarjeta-contenido {
     text-decoration: none;
 }
 
@@ -146,20 +155,20 @@
     border-top: 2px solid black;
 }
 
-.tarjetaTitulo{
+.tarjetaTitulo {
     color: darkslategray;
     font-weight: bolder;
     font-size: 18px;
 }
 
-.tarjetaPrecio{
+.tarjetaPrecio {
     color: darkslategray;
     font-weight: bolder;
     text-align: center;
     font-size: 20px;
 }
 
-.tarjetaDetalle{
+.tarjetaDetalle {
     width: 100px;
     font-size: 14px;
     background-color: darkslategray;
@@ -169,66 +178,66 @@
 
 //ITEM DETALLE
 
-.itemDetalle {  
+.itemDetalle {
     padding: 1em;
     font-family: 'Roboto', sans-serif;
     color: black;
     display: inline-flex;
     flex-wrap: wrap;
     align-items: center;
-    height: 100%; 
- }
+    height: 100%;
+}
 
-.itemImg{
+.itemImg {
     width: 12em;
     height: 12em;
     border-radius: 50%;
-    
+
 }
 
-.itemDetail{
+.itemDetail {
     margin-top: 1em;
 }
 
-.itemPrecio{
+.itemPrecio {
     font-weight: bolder;
     text-align: center;
-    font-size: 1.5em;    
+    font-size: 1.5em;
 
 }
 
-.itemCarac{
+.itemCarac {
     text-align: center;
     font-size: 0.8em;
     border-bottom: 2px solid rgba(0, 0, 0, .5);
     padding: 1em;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.detalleProd{
+.detalleProd {
     color: #666;
     font-size: 1rem;
     font-weight: 300;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 20px;
 }
 
-.cuotas{
+.cuotas {
     color: green;
     font-size: 14px;
     font-weight: bolder;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-left: 8px;
     text-align: left;
 }
 
-.listCategorias{
+.listCategorias {
     text-decoration: none;
-    color: white;  
-    margin-left: -20px; 
+    color: white;
+    margin-left: -20px;
 }
 
-.botonSeguirCompra{
+.botonSeguirCompra {
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     color: #212529;
@@ -236,16 +245,16 @@
     padding: 0.5em;
     border-radius: 10px;
     margin: 1em;
-    background-color:white;
+    background-color: white;
     border: 3px solid rgba(0, 0, 0, .3);
 }
 
-.botonSeguirCompra:hover{
+.botonSeguirCompra:hover {
     color: white;
-    background-color:#404850;
+    background-color: #404850;
 }
 
-.botonVerCarrito{
+.botonVerCarrito {
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     color: white;
@@ -253,15 +262,15 @@
     padding: 0.5em;
     border-radius: 10px;
     margin: 1em;
-    background-color:rgba(0, 128, 0, .5);
+    background-color: rgba(0, 128, 0, .5);
     border: rgba(30, 144, 255, .9);
 }
 
-.botonVerCarrito:hover{
-    background-color:rgba(2, 54, 2, 0.5);
+.botonVerCarrito:hover {
+    background-color: rgba(2, 54, 2, 0.5);
 }
 
-.sinStock{
+.sinStock {
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     font-weight: bolder;
@@ -270,38 +279,38 @@
 
 //NOTIFICACIONES
 
-.notif-add{
+.notif-add {
     display: flex;
     background-color: green;
     border-radius: 10px;
     color: white;
-    padding: 1em;   
+    padding: 1em;
     font-family: 'Poppins', sans-serif;
     font-size: 0.8em;
     width: 100%;
-    height: 3.5em;  
+    height: 3.5em;
     position: relative;
     bottom: 5px;
-    position:fixed;
+    position: fixed;
 }
 
-.notif-delete{
+.notif-delete {
     display: flex;
     background-color: red;
     border-radius: 10px;
     color: white;
-    padding: 1em; 
+    padding: 1em;
     font-family: 'Poppins', sans-serif;
     font-size: 0.8em;
     width: 100%;
-    height: 3.5em;  
+    height: 3.5em;
     position: relative;
     bottom: 5px;
-    position:fixed;
+    position: fixed;
 }
 
 
-.notif-name{
+.notif-name {
     font-size: 20px;
     margin-left: 10px;
 }
@@ -309,14 +318,14 @@
 
 //ORDENES
 
-.order-tit{
+.order-tit {
     color: black;
     font-weight: bolder;
     font-family: 'Poppins', sans-serif;
     margin-top: 10px;
 }
 
-.order-container{
+.order-container {
     display: flex;
     align-items: center;
 }
@@ -326,45 +335,45 @@
     margin-left: -350px;
     width: 500px;
     background-color: white;
-    padding: 20px;   
+    padding: 20px;
     text-align: left;
     font-family: 'Roboto', sans-serif;
 }
 
-.imgProd{
+.imgProd {
     width: 100px;
     height: 100px;
 }
 
-.detalleOrder{
+.detalleOrder {
     color: #666;
     font-size: 14px;
     font-weight: 300;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-left: 20px;
 }
 
-.detalleOrderDate{
+.detalleOrderDate {
     color: #666;
     font-size: 14px;
     font-weight: bolder;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-left: 20px;
 }
 
 //COMBO
 
-.combo-category{ 
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    justify-content:space-evenly;
+.combo-category {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
     margin-bottom: 2em;
-   
-    
+
+
 }
 
-.combo-category select{
+.combo-category select {
     width: 20em;
     font-size: 0.6em;
     font-family: 'Poppins', sans-serif;
@@ -372,14 +381,29 @@
 }
 
 
+@media only screen and (max-width: 1250px) {
 
+
+    .table-tit-precio {
+        width: 30em;
+    }
+    .table-container {
+        height: 30em;
+        width: 100%;
+        table {
+            width: 140%;
+        }
+    }
+
+}
 
 
 @media only screen and (max-width: 895px) {
 
+
     .tarjeta {
         width: 18em;
-       
+
     }
 
     .tarjeta img {
@@ -388,19 +412,19 @@
         margin-left: -2em;
     }
 
-   
-    .itemDetalle {  
+
+    .itemDetalle {
         display: inline-block;
         margin-top: 4em;
-     }
+    }
 
 
-    .combo-category select{
+    .combo-category select {
         width: 28em;
         height: 4em;
         font-size: 0.7em;
     }
-    
 
 
-  }
+
+}

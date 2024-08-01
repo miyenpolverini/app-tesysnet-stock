@@ -37,7 +37,7 @@ const ButtonSearch = () => {
 
     return (
         < >
-            <InputGroup className="mb-3 inputBuscar">
+            <InputGroup className="mb-3 mt-3 inputBuscar">
                 <InputGroup.Text id="basic-addon1">
                     <FaSearch />
                 </InputGroup.Text>

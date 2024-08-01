@@ -9,8 +9,6 @@ import ItemListCables from './Components/ItemListContainer/ItemListCables';
 import ItemListCartuchos from './Components/ItemListContainer/ItemListCartuchos';
 import ItemNuevo from './Components/ItemNuevo/ItemNuevo';
 import StockRegistered from './Components/StockRegistered/StockRegistered';
-
-import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './Components/ItemListContainer/ItemDetailContainer';
 import Cart from './Components/Cart/Cart';
 import FormBuy from './Components/FormBuy/FormBuy';

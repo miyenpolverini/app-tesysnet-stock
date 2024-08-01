@@ -44,7 +44,7 @@ const NavBar = () => {
                                     <p className='info'>AGREGAR PRODUCTO</p>
                                 </div>
                             </Link>
-                            <Link className="active menu-boot" to={'/infoEvento'}>
+{/*                             <Link className="active menu-boot" to={'/infoEvento'}>
                                 <div className='icon-calendar'>
                                     <BiCalendar />
                                 </div>
@@ -59,7 +59,7 @@ const NavBar = () => {
                                 <div>
                                     <p className='info'>MIS REGALOS</p>
                                 </div>
-                            </Link>
+                            </Link> */}
                         </ul>
                     </div>
                 </div>

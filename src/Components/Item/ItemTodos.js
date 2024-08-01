@@ -5,6 +5,7 @@ import { useContext, useState } from 'react'
 import cartContext from '../../Context/cartContext'
 import { dataBase } from '../../services/firebase/firebase'
 import { doc, updateDoc, increment, collection, getDocs, query, orderBy } from "firebase/firestore";
+import { useMediaQuery } from 'react-responsive'
 import { GoDash } from "react-icons/go";
 import { FaPlus } from "react-icons/fa";
 import Button from 'react-bootstrap/Button';
@@ -24,6 +25,10 @@ const ItemTodos = ({ producto }) => {
     const [newPrice, setNewPrice] = useState('')
 
     const { parseNumber, loaderStock, setLoaderStock, setTotalStock, setProducts } = useContext(cartContext)
+
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 1250px)'
+    })
 
 
     const substractStock = (idProducto, stockProducto) => {
@@ -200,11 +205,10 @@ const ItemTodos = ({ producto }) => {
                         {loaderStock &&
                             <div className='loaderStock'>
                                 <l-line-spinner
-
                                     size="45"
                                     stroke="5"
                                     speed="1"
-                                    color="black"
+                                    color="red"
                                 ></l-line-spinner>
                             </div >
                         }
@@ -231,31 +235,34 @@ const ItemTodos = ({ producto }) => {
                                                 <td className='celda-formato1'>{product.categoria.toUpperCase()}</td>
                                                 <td className='celda-formato2'>{product.marca.toUpperCase()}</td>
                                                 <td className='celda-formato1'>{product.nombre.toUpperCase()}</td>
-                                                {/*  <td className='celda-formato1'>$ {parseNumber(product.precio)}</td> */}
-                                                <td>
-                                                    {id === product.id && editable ?
-                                                        <div className="input-group">
-                                                            <span className="input-group-text">$</span>
-                                                            <input
-                                                                type="number"
-                                                                className="form-control"
-                                                                value={newPrice}
-                                                                onChange={handlePrice} />
-                                                            <Button variant="light" onClick={() => updatePrice(product.id)}  >
-                                                                <img className='iconUpdate' src='https://res.cloudinary.com/dw94zgfgu/image/upload/v1722389354/status-updated-svgrepo-com_of5s4l.png' alt='carrito-lleno'
-                                                                ></img>
-                                                            </Button>
-                                                        </div>
-                                                        :
-                                                        <div className="input-group">
-                                                            <span className="input-group-text">$</span>
-                                                            <input type="number" className="form-control" value={parseNumber(product.precio)} disabled />
-                                                            <Button variant="light" onClick={() => handlePencil(product.id)} >
-                                                                <FaPencilAlt />
-                                                            </Button>
-                                                        </div>
-                                                    }
-                                                </td>
+                                                {isDesktopOrLaptop ?
+                                                    <td className='celda-formato2'>
+                                                        {id === product.id && editable ?
+                                                            <div className="input-group">
+                                                                <span className="input-group-text">$</span>
+                                                                <input
+                                                                    type="number"
+                                                                    className="form-control"
+                                                                    value={newPrice}
+                                                                    onChange={handlePrice} />
+                                                                <Button variant="light" onClick={() => updatePrice(product.id)}  >
+                                                                    <img className='iconUpdate' src='https://res.cloudinary.com/dw94zgfgu/image/upload/v1722389354/status-updated-svgrepo-com_of5s4l.png' alt='carrito-lleno'
+                                                                    ></img>
+                                                                </Button>
+                                                            </div>
+                                                            :
+                                                            <div className="input-group">
+                                                                <span className="input-group-text">$</span>
+                                                                <input type="number" className="form-control" value={parseNumber(product.precio)} disabled />
+                                                                <Button variant="light" onClick={() => handlePencil(product.id)} >
+                                                                    <FaPencilAlt />
+                                                                </Button>
+                                                            </div>
+                                                        }
+                                                    </td>
+                                                    :
+                                                    <td className='celda-formato1'>$ {parseNumber(product.precio)}</td>
+                                                }
                                                 <td className='celda-formato2'>{product.stock}</td>
                                                 <td className='celda-formato2'><GoDash className='iconStock' onClick={() => substractStock(product.id, product.stock)} /></td>
                                                 <td className='celda-formato2'><FaPlus className='iconStock' onClick={() => addStock(product.id)} /></td>

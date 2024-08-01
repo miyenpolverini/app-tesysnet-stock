@@ -8,7 +8,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 
 const ButtonSearch = () => {
 
-    const {  setProducts, tableProducts } = useContext(cartContext)
+    const { setProducts, tableProducts } = useContext(cartContext)
 
     const [busqueda, setBusqueda] = useState('')
 
@@ -42,6 +42,7 @@ const ButtonSearch = () => {
                     <FaSearch />
                 </InputGroup.Text>
                 <Form.Control
+                    type="search"
                     placeholder="Busqueda por código o categoría..."
                     aria-label="Username"
                     aria-describedby="basic-addon1"

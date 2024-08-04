@@ -14,11 +14,15 @@
 .table-scroll {
     overflow: auto;
     font-size: 0.9em;
+    width: 60em;
 }
 
 .table-container {
+
+
     height: 30em;
     width: 100%;
+
     table {
         width: 100%;
     }
@@ -49,6 +53,10 @@
 
 .table-tit-stock {
     width: 4em;
+}
+
+.table-tit-tach {
+    width: 1em;
 }
 
 .celda-formato1 {
@@ -384,17 +392,29 @@
 @media only screen and (max-width: 1250px) {
 
 
-    .table-tit-precio {
-        width: 30em;
-    }
-    .table-container {
-        height: 30em;
-        width: 100%;
-        table {
-            width: 140%;
-            
+
+    .table-productos {
+        width: 70em !important;
+        margin-bottom: 0;
+        max-width: none;
+
+        .table-input {
+            width: 12em;
         }
     }
+
+
+    .table-scroll {
+        width: 100%;
+    }
+
+    .table-container {
+        width: 400px;
+
+    }
+
+
+
 
 }
 

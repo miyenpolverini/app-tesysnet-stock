@@ -143,7 +143,7 @@ const Item = ({ producto }) => {
                                 ></l-line-spinner>
                             </div >
                         }
-                        <table className="table table-bordered border-secondary table-light table-hover table-carrito">
+                        <table className="table table-bordered border-secondary table-light table-hover table-productos">
                             <thead>
                                 <tr>
                                     <th className='table-dark table-tit-cod' scope="col">Código</th>

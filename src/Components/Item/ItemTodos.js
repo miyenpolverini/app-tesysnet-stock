@@ -239,7 +239,7 @@ const ItemTodos = ({ producto }) => {
                                                     {/*  <td className='celda-formato1'>$ {parseNumber(product.precio)}</td> */}
                                                     <td className='celda-formato2'>
                                                         {id === product.id && editable ?
-                                                            <div className="input-group">
+                                                            <div className="input-group table-input">
                                                                 <span className="input-group-text">$</span>
                                                                 <input
                                                                     type="number"
@@ -252,7 +252,7 @@ const ItemTodos = ({ producto }) => {
                                                                 </Button>
                                                             </div>
                                                             :
-                                                            <div className="input-group">
+                                                            <div className="input-group table-input">
                                                                 <span className="input-group-text">$</span>
                                                                 <input type="number" className="form-control" value={parseNumber(product.precio)} disabled />
                                                                 <Button variant="light" onClick={() => handlePencil(product.id)} >
